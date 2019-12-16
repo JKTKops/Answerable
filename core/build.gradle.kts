@@ -1,23 +1,9 @@
-buildscript {
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath("com.github.ben-manes:gradle-versions-plugin:0.21.0")
-        classpath("org.jetbrains.dokka:dokka-gradle-plugin:0.9.18")
-    }
-}
-
 plugins {
-    java
     kotlin("jvm")
+    java
     id("org.jetbrains.dokka") version "0.9.18"
-    id("com.github.ben-manes.versions") version "0.21.0"
 }
 
-repositories {
-    jcenter()
-}
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.javassist:javassist:3.25.0-GA")
@@ -28,18 +14,10 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter:5.4.2")
 }
 
-tasks.compileKotlin {
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
-}
-tasks.compileTestKotlin {
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
-}
-
 tasks.dokka {
     outputFormat = "html"
     outputDirectory = "$buildDir/javadoc"
+}
+tasks.test {
+    useJUnitPlatform()
 }
