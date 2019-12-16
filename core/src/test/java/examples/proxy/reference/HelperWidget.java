@@ -32,7 +32,7 @@ public class HelperWidget {
 
     @Helper
     private static HelperWidget[] helper(String toPrint) {
-        System.out.println(toPrint);
+        // System.out.println(toPrint);
         return new HelperWidget[] { new HelperWidget() };
     }
 

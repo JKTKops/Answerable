@@ -12,6 +12,6 @@ internal class AdHoc {
         answerable.loadNewQuestion("test", examples.testing.reference.Test::class.java)
         val out = answerable.submitAndTest("test", examples.testing.Test::class.java)
 
-        println(out.toJson())
+        // println(out.toJson())
     }
 }

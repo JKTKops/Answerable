@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
 
 fun TestRunOutput.assertAllSucceeded(showOutput: Boolean = true) {
-    if (showOutput) println(this.toJson())
+    // if (showOutput) println(this.toJson())
     this.classDesignAnalysisResult.forEach { assertTrue(it.result is Matched, "Class design check failed") }
     this.testSteps.forEach {
         if (it is ExecutedTestStep) {

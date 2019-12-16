@@ -11,9 +11,9 @@ class ServiceJavaIntegrationTest {
 
         answerable.loadNewQuestion("LastTen", examples.lastten.correct.reference.LastTen.class);
 
-        System.out.println(answerable
+        /* System.out.println(answerable
                 .submitAndTest("LastTen", examples.lastten.correct.LastTen.class).toJson()
-        );
+        );*/
     }
 
 }

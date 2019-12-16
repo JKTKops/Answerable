@@ -147,7 +147,7 @@ internal class TestGeneratorTest {
             .loadSubmission(examples.testgeneration.PreconditionTest::class.java)
             .runTestsUnsecured(Random.nextLong())
 
-        println(out.toJson())
+        // println(out.toJson())
 
         assertTrue(
             out.testSteps.any { it is ExecutedTestStep }
@@ -204,7 +204,7 @@ internal class TestGeneratorTest {
 
         out.assertAllSucceeded()
     }
-    
+
     @Test
     fun testRunnerArgsOverriding() {
         val seed = Random.nextLong()
